@@ -1,3 +1,26 @@
+# Bayesian Logistic Regression
+
+# Import Files
+setwd("C:/Users/jgros/Documents/GitHub/515Project/data")
+temp = list.files(pattern="*.csv")
+
+for (i in 1:length(temp)){
+  assign(temp[i], read.csv(temp[i]))
+}
+
+
+setwd("C:/Users/jgros/Documents/GitHub/515Project/Ratings")
+temp = list.files(pattern="*.xlsx")
+
+library(readxl)
+for (i in 1:length(temp)){
+  assign(temp[i], readxl_example(temp[i]))
+}
+
+
+## NEED TO CALCULATE THINGS AND SPLIT INTO TRAINING TESTING DATA HERE
+
+##Logistic Regression
 logist= function(x){
   ff= 1/(1 + exp(-x))
   return(ff)
