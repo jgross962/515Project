@@ -19,9 +19,8 @@ OOSPredicts = function(x,y, test.indexes = sample(length(y),as.integer(length(y)
   
   # For fits 1,2, 3 we optimize the hyperparameters once, for efficiency (loses some accuracy)
   # Lasso
-  fit1<- glmnet(x = x.train, y = y.train, alpha=1, family='binomial')
-  fit1.predict = predict(fit1, s= best.lambda1, newx = x.test)
-  fit1.logistPred = logist(fit1.predict)
+  fit1<- glmnet(x = x.train, y = y.tra
+                t)
   
   
   # Elastic Net, Alpha = .5
